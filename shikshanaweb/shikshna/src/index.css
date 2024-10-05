@@ -1,0 +1,301 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  animation: zoomEffect 20s ease-in-out infinite;
+}
+@keyframes zoomEffect {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5); /* Black transparent layer */
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.container {
+  position: relative;
+  z-index: 3; /* Ensure the container or form is above the overlay */
+  color: white;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 160px;
+  
+ 
+}
+
+.menu ul{
+  display: flex;
+  list-style-type: none;
+}
+.menu ul li{
+  padding: 10px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  z-index: 4;
+ 
+
+  
+}
+
+.menu ul li a {
+  color: black;/* Sets the Link text color to white */
+  text-decoration: none; /* Removes underline from the link */
+}
+
+.logo{
+  position: relative;
+  z-index: 4;
+  
+}
+.logo-container{
+  margin-top: -100px;
+  margin-left: 70px;
+}
+input{
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  height: 60px;
+  width: 300px;
+  font-size: 20px;
+  border: 2px solid rgb(76, 75, 75);
+  border-radius: 10px;
+  background-color: rgba(53, 53, 53, 0.416);
+  
+}
+button{
+  height: 50px;
+  width: 150px;
+  border: 2px solid rgb(179, 1, 1);
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  background-color:rgb(179, 1, 1);
+  position: relative;
+  z-index: 4;
+  margin:20px;
+}
+
+.form{
+  padding: 40px;
+  width: 360px;
+  height: 100%;
+  border-radius: 40px;
+  position: relative;
+  z-index: 4;
+  
+}
+.slogan{
+  margin-top: 90px;
+  font-size: 60px;
+  color: white;
+  position: relative;
+  z-index: 4;
+}
+.slogan1{
+  font-size: 30px;
+  color: white;
+  position: relative;
+  z-index: 4;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  
+  
+}
+.dropdown-menu {
+  margin-left: 25px;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  color: white;
+  background-color:rgb(179, 1, 1);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: white;
+  background-color:rgb(179, 1, 1);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+/* Change color on hover */
+.dropdown-menu a:hover {
+  background-color:rgb(179, 1, 1);
+}
+
+h2{
+  padding-bottom: 20px;
+  color: white;
+  position: relative;
+  z-index: 4;
+}
+
+.form-container{
+  width: 400px;
+  height: 600px;
+  background-color:rgb(62, 62, 62);
+}
+select{
+  color: white;
+  font-weight: bold;
+  padding: 20px; 
+  height: 60px;
+  width: 300px;
+  font-size: 20px;
+  border: 2px solid rgb(76, 75, 75);
+  border-radius: 10px;
+  background-color: rgba(53, 53, 53, 0.416);
+}
+.option{
+  height: 100px;
+}
+
+.upload{
+color: white;
+font-size: 30px;
+}
+th{
+  color: white;
+  position: relative;
+  z-index: 4;
+  font-size: 30px;
+  padding: 50px;
+}
+td{
+  color: white;
+  position: relative;
+  z-index: 4;
+padding-left: 50px;
+  font-size: 18px;
+}
+table{
+  border: 1px solid white;
+  align-items: center;
+  background-color:   white;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.slogan {
+  animation: fadeInBounce 4s ease-in-out;
+}
+
+.slogan1 {
+  animation: fadeInBounce 4s ease-in-out;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body.remove-before-style::before {
+  content: none;
+}
+.content h2{
+
+  color: black;
+
+}
+.App img{
+  border-style: dashed;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  height: 100vh;
+  padding: 10px;
+  position: relative;
+  z-index: 4;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.sidebar ul li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.sidebar ul li:hover {
+  background-color: #ccc;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  position: relative;
+  z-index: 4;
+}
+
+.content {
+  margin-left: 260px; /* To push the content away from the sidebar */
+  padding: 20px;
+}
+
+
+
+
